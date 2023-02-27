@@ -65,7 +65,7 @@ function calculateMonthlyCost() {
         annualCost += employee.salary;
     }
 
-    const monthlyCost = (annualCost/12).toFixed(2);
+    const monthlyCost = (annualCost / 12).toFixed(2);
 
     return monthlyCost;
 }
@@ -93,6 +93,12 @@ function render() {
     }
 
     const monthlyCost = calculateMonthlyCost();
+
+    // If monthly cost is greater than 20,000, display a message that says we're over budget
+    if (monthlyCost > 20000) {
+        $('#total-cost').addClass('red-background');
+        console.log('big cost')
+    }
 
     $('#monthly-cost').text(monthlyCost);
 }
