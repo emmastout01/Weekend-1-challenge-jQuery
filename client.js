@@ -94,5 +94,5 @@ function render() {
 
     const monthlyCost = calculateMonthlyCost();
 
-    $('#monthly-cost').append(monthlyCost);
+    $('#monthly-cost').text(monthlyCost);
 }
